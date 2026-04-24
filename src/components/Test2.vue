@@ -2,8 +2,8 @@
 export default {
   data() {
     return {
-      className: "title",
-      isActive: true,
+      fontColor: "#888888",
+      fontSize: 32,
     };
   },
 };
@@ -11,25 +11,16 @@ export default {
 
 <template>
   <div>
-    <!-- class에 title 바인딩 -->
-    <h1 v-bind:class="className">How to use v-bind</h1>
-    <!-- isActive가 true일 때 active 클래스 적용 -->
-    <!-- !isActive라고 하면 class에 빈문자열 적용됨 -->
-    <h1 v-bind:class="{ active: isActive }">How to use v-bind</h1>
-    <!-- 위 내용을 축약하여 아래처럼 적용 가능 -->
-    <h1 :class="className">How to use v-bind</h1>
-    <h1 :class="{ active: isActive }">How to use v-bind</h1>
+    <!-- 인라인 스타일 -->
+    <h3 style="color: red; font-size: 24px">Inline Style</h3>
+    <!-- 스타일 바인딩 -->
+    <h3 :style="{ color: fontColor, fontSize: fontSize + 'px' }">
+      Style Binding
+    </h3>
   </div>
 </template>
 
-<style scoped>
-h1.active {
-  color: green;
-}
-.title {
-  color: orange;
-}
-</style>
+<style scoped></style>
 
 <!-- 
 v-bind : 데이터와 HTML 요소의 속성 간의 바인딩을 처리하는 핵심 디렉티브
