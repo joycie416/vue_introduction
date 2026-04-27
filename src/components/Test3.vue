@@ -30,9 +30,9 @@ export default {
     <h3>isVisible : {{ isVisible }}</h3>
     <p v-if="isVisible">{{ message }}</p>
     <p v-show="isVisible">{{ message }}</p>
-    <button @click="toggleVisibility">Toggle Visibility</button>
+    <!-- 이벤트 핸들링링 -->
+    <button v-on:click="toggleVisibility">Toggle Visibility</button>
     <hr />
-    <!-- v-if, v-else-if, v-else -->
     <div
       style="
         display: flex;
@@ -41,6 +41,7 @@ export default {
         gap: 10px;
       "
     >
+      <!-- v-on은 `@`으로 축약할 수 있음음 -->
       <button @click="decreaseScore">Decrease Score</button>
       <h3>score : {{ score }}</h3>
       <button @click="increaseScore">Increase Score</button>

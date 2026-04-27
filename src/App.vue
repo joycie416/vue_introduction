@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Test4 from "@/components/Test4.vue";
+import Test from "@/components/Test3.vue";
 </script>
 
 <template>
-  <Test4 />
+  <Test />
 </template>
