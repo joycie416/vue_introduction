@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Test from "@/components/Test5.vue";
+import Test from "@/components/Test6.vue";
 </script>
 
 <template>
