@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import EventParent from "./components/chap 04/EventParent.vue";
+import PiniaBasic from "./components/chap 05/PiniaBasic.vue";
 </script>
 
 <template>
-  <EventParent />
+  <PiniaBasic />
 </template>
