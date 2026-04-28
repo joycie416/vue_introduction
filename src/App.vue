@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Test from "@/components/Test.vue";
+import Parent from "./components/chap 04/Parent.vue";
 </script>
 
 <template>
-  <Test />
+  <Parent />
 </template>
