@@ -17,6 +17,15 @@ export default defineComponent({
       required: false,
     },
   },
+  /**
+   * 언마운트 단계
+   */
+  beforeUnmount() {
+    console.log("Life cycle - beforeUnmount: Child 제거 직전");
+  },
+  unmounted() {
+    console.log("Life cycle - unmounted: Child 제거 완료");
+  },
 });
 </script>
 

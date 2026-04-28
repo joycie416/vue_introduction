@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Parent from "./components/chap 04/Parent.vue";
+import LifeCycle from "./components/chap 04/LifeCycle.vue";
 </script>
 
 <template>
-  <Parent />
+  <LifeCycle />
 </template>
