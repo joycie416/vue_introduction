@@ -1,35 +1,19 @@
-<script lang="ts">
+<script lang="ts" setup>
+// <script setup> 적용 시 기존 setup() 처럼 자동으로 적용해줌.
 import { ref } from "vue";
 
-export default {
-  setup() {
-    // 반응형 상대값
-    const count = ref(0);
+// 반응형 상대값
+const count = ref(0);
 
-    // 메서드
-    const increment = () => {
-      count.value++;
-    };
-
-    return { count, increment };
-  },
+// 메서드
+const increment = () => {
+  count.value++;
 };
 </script>
 
 <template>
   <div>
     <p>Count : {{ count }}</p>
-    <!-- <p>Double Count : {{ counter.doubleCount }}</p>
-    <p>Double Plus One Count : {{ counter.doublePlusOne }}</p> -->
     <button @click="increment">+1</button>
-    <!-- <button @click="randomizeCounter">랜덤 카운터</button>
-    <div>
-      <p>Remainder of Count : {{ counter.getRemainderOfCounter(divider) }}</p>
-      <input type="number" min="1" v-model="divider" />
-    </div>
-    <div>
-      <input type="number" min="1" v-model="newCount" />
-      <button @click="() => setCounter(newCount)">카운터 변경</button>
-    </div> -->
   </div>
 </template>
