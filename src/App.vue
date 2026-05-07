@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Basic from "./components/chap 08/basic.vue";
+import Data from "./components/chap 08/Data.vue";
 </script>
 
 <template>
-  <Basic />
+  <Data />
 </template>
