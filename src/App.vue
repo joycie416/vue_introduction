@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import PiniaBasic from "./components/chap 05/PiniaBasic.vue";
+import Basic from "./components/chap 08/basic.vue";
 </script>
 
 <template>
-  <PiniaBasic />
+  <Basic />
 </template>
