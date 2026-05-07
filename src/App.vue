@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Data from "./components/chap 08/Data.vue";
+import Computed from "./components/chap 08/Computed.vue";
 </script>
 
 <template>
-  <Data />
+  <Computed />
 </template>
