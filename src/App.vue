@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Watch from "./components/chap 08/Watch.vue";
+import LifeCycle from "./components/chap 08/LifeCycle.vue";
 </script>
 
 <template>
-  <Watch />
+  <LifeCycle />
 </template>
