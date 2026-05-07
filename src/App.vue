@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Computed from "./components/chap 08/Computed.vue";
+import Watch from "./components/chap 08/Watch.vue";
 </script>
 
 <template>
-  <Computed />
+  <Watch />
 </template>
