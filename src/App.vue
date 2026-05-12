@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import LifeCycle from "./components/chap 08/LifeCycle.vue";
+import EventParent from "./components/chap 08/EventParent.vue";
 </script>
 
 <template>
-  <LifeCycle />
+  <EventParent />
 </template>
