@@ -2,6 +2,8 @@
   <h1>{{ props.name }} / {{ props.age }}</h1>
   <h1>{{ name }} / {{ age }}</h1>
   <p>{{ city }}</p>
+  <button @click="sendMessage">Emit</button>
+  <button @click="popupAlert">Emit2</button>
 </template>
 
 <script setup lang="ts">
@@ -46,4 +48,30 @@ const city = toRef(() => props.address.city);
 // 객체의 모든 속성을 반응형 참조로 변환
 // 중첩 객체의 여러 속성을 한번에 구조 분할하거나 간결한 코드가 중요한 경우에 사용
 const { name, age } = toRefs(props);
+
+// 함수 전달 받는 경우
+// const emit = defineEmits(["send-message"]);
+// const sendMessage = () => {
+//   emit("send-message", "defineEmits 테스트");
+// };
+
+// 여러 함수를 전달 받는 경우
+// vue + ts 인 경우 아래처럼 작성하는 것을 권장함함
+const emit = defineEmits<{
+  sendMessage: [message: string];
+  popupAlert: [message: string, number?: number];
+}>();
+const sendMessage = () => {
+  emit("sendMessage", "defineEmits 테스트");
+};
+const popupAlert = () => {
+  emit("popupAlert", "defineEmits 테스트2", 2);
+};
+/**
+ * 아래처럼 call signature 방식으로도 작성할 수 있음
+const emit = defineEmits<{
+  (e: 'sendMessage', message: string): void
+  (e: 'popupAlert', message: string, number?: number): void
+}>()
+ */
 </script>
